@@ -32,10 +32,11 @@ function App() {
   }
 
   const addHandler = () => {
-    setAccounts([...accounts, inputData])
+    let copyAccounts = [...accounts, inputData]
+    setAccounts(copyAccounts)
     setInputData(initInputData)
-    console.log(accounts);
-    localStorage.accounts = JSON.stringify(accounts)
+    console.log(copyAccounts);
+    localStorage.accounts = JSON.stringify(copyAccounts)
 
   }
 
