@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import { useState } from 'react';
 import Form from './components/Form';
@@ -68,18 +67,14 @@ function App() {
       <div className="container text-center py-5">
 
         <Form inputData={inputData} inputHandler={inputHandler} addHandler={addHandler} changeHandler={changeHandler} isEdit={isEdit} />
-
-
         <div className="row mt-5  accounts-table">
           <div className="col-8 offset-2">
-
             {
               accounts.length !== 0 &&
               <Table accounts={accounts} editAccount={editAccount} deleteAccount={deleteAccount} />
             }
           </div>
         </div>
-
       </div>
     </>
   );
